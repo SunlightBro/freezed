@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - test_deps
   pull_request:
   schedule:
     # runs the CI everyday at 10AM
