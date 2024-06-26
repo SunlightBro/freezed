@@ -31,7 +31,9 @@ extension FindAllAvailableTopLevelElements on LibraryElement {
     yield* topLevelElements;
 
     final librariesToCheck = checkExports
+        //ignore: deprecated_member_use
         ? libraryExports.map(_LibraryDirectives.fromExport).whereNotNull()
+        //ignore: deprecated_member_use
         : libraryImports.map(_LibraryDirectives.fromImport).whereNotNull();
 
     for (final directive in librariesToCheck) {
